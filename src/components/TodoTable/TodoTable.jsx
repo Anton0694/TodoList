@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 
-export const TodoTable = ({todos, onToggleStatus, selectTodo}) => {
+export const TodoTable = ({todos, onToggleStatus, onSelectTodo}) => {
     return (
         <table>
             <thead>
@@ -17,10 +17,10 @@ export const TodoTable = ({todos, onToggleStatus, selectTodo}) => {
 
             <tbody>
                 {todos.map(({ id, title, description, status, todo }) => (
-                    <tr key={id} onClick={() => selectTodo(todo)}>
-                        <td>{id}</td>
-                        <td>{title}</td>
-                        <td>{description}</td>
+                    <tr key={id} >
+                        <td onClick={() => onSelectTodo(todo)}>{id} </td>
+                        <td onClick={() => onSelectTodo(todo)}>{title}</td>
+                        <td onClick={() => onSelectTodo(todo)}>{description}</td>
                     <td>
                       <input
                         type="checkbox"

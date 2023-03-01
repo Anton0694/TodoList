@@ -51,7 +51,7 @@ export class App extends Component {
 };
   
     render() {
-      const { todos, showModal, toggleModal} = this.state
+      const { todos, showModal, selectedTodo} = this.state
       return (
         <div>
           <TodoCreateForm onSubmit={this.onSubmitHandler} />
@@ -61,8 +61,8 @@ export class App extends Component {
           onSelectTodo={this.selectTodo}/>
           {showModal && (
             <Modal
-              todos={todos}
-            onToggleStatus={this.toggleStatus}>
+             
+            >
               <div>
                 {todos.map((todo) => (
                   <div key={todo.id}>
@@ -70,10 +70,11 @@ export class App extends Component {
                     <h3>{todo.description}</h3>
                     <p>Status:
                     <label>
-                      <input type="checkbox" checked={this.state.status} onToggleStatus={this.toggleStatus} />
+                      <input type="checkbox"  
+      onChange={this.toggleStatus} />
                       </label>
                       </p>
-                    <button type='button' onClick={toggleModal}>Close</button>
+                    <button type='button' onClick={() => this.toggleModal(false)}>Close</button>
       </div>
     ))}
   </div>
