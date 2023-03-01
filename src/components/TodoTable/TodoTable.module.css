@@ -1,0 +1,33 @@
+
+
+table {
+    margin-top: 30px;
+        width: 800px;
+        margin-right: auto;
+        margin-left: 30px;
+
+}
+
+thead {
+    width: 25%;
+    font-size: 20px;
+    
+    background-color:rgb(210, 210, 210);
+}
+
+th {
+    font-weight: normal;
+        padding: 10px;
+        
+}
+
+tr {
+    text-align: center;
+}
+
+
+td {
+
+    text-align: center;
+        text-transform: capitalize;
+}

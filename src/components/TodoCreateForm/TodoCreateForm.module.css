@@ -1,0 +1,41 @@
+form
+{display: flex;
+    flex-direction: row;
+    width: 200px;
+    margin-left: 30px;
+    margin-top: 10px;
+    align-items: center;
+    gap: 40px;
+}
+ 
+
+
+input
+{margin-bottom: 15px;
+    box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+
+   }
+ 
+
+label{
+    margin-right: 5px;} 
+
+button{
+    display: flex;
+    height: fit-content;
+        border-radius: 5px;
+        border-color: grey;
+        cursor: pointer;
+} 
+
+.errorText {
+    color: red;
+        font-size: 14px;
+        font-weight: bold;
+}
+
+.error {
+    border: 1px solid red;
+    
+}
