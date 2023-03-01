@@ -60,9 +60,7 @@ export class App extends Component {
             onToggleStatus={this.toggleStatus}
           onSelectTodo={this.selectTodo}/>
           {showModal && (
-            <Modal
-             
-            >
+            <Modal onSelectTodo={this.selectTodo}>
               <div>
                 {todos.map((todo) => (
                   <div key={todo.id}>
@@ -70,11 +68,12 @@ export class App extends Component {
                     <h3>{todo.description}</h3>
                     <p>Status:
                     <label>
-                      <input type="checkbox"  
-      onChange={this.toggleStatus} />
+                        <input type="checkbox"  
+                          checked={selectedTodo}
+      onChange={() => this.toggleModal(selectedTodo.id)} />
                       </label>
                       </p>
-                    <button type='button' onClick={() => this.toggleModal(false)}>Close</button>
+                    <button type='button' onClick={this.toggleModal}>Close</button>
       </div>
     ))}
   </div>

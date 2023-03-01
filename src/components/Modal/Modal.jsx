@@ -9,9 +9,7 @@ export const Modal = ({ children, onToggleStatus }) => {
     return createPortal (
             <div className={css.Overlay}>
             <div className={css.ModalBox}>
-                {React.Children.map(children, (child) => {
-          return React.cloneElement(child, { onToggleStatus: onToggleStatus });
-                })}
+                {React.cloneElement(children, { onToggleStatus })}
             </div>
             </div>,
             modalRoot,
